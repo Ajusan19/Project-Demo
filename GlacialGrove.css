@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root{
+    --primaryColor: #a333987b;
+    --secondaryColor: #ffc107;
+    --whiteColoe: #fff;
+    --blackColor: #222;
+    --sofrGreenColor: #d9f2ee;
+    --darkGreyColor: #a7a7a7;
+    --GreyColor: #f5f5f5;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Poppins',sans-serif;
+}
+
+
+body{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+
+.sidebar{
+    height: 100%;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 2%;
+    background: linear-gradient(to bottom right, #b47483, #a1f4ff);
+
+    color: var(--whiteColoe);
+}
+
+.sidebar .logo{
+    margin-left: -60px;
+    margin-top: -40px;
+}
+
+.sidebar-menu{
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-logout{
+   margin-top: 40px;
+}
+
+.sidebar-menu a , .sidebar-logout a {
+    padding: 5% 8%;
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    text-decoration: none;
+    color: var(--whiteColoe);
+}
+
+.sidebar-menu a ion-icon , .sidebar-logout a ion-icon{
+    font-size: 20px;
+}
+
+
+.sidebar-menu a:hover , .sidebar-logout a:hover{
+    background-color: var(--secondaryColor);
+    border-radius: 50px;
+}
+
+.main{
+    width: 100%;
+    height: max-content;
+    min-height: 100vh;
+    padding: 2%;
+    background-color: var(--sofrGreenColor) ;
+    margin-left: 250px;
+}
+
+.main-navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-toggle{
+    display: none;
+}
+
+.search{
+    width: 60%;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--whiteColoe);
+    border-radius:20px ;
+    margin-bottom: 30px;
+}
+
+
+.search input {
+    width: 80%;
+    height: 100%;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+}
+
+
+.search-btn{
+    /* background-color: var(--secondaryColor); */
+    color: black;
+    background: linear-gradient(to bottom right, #20ad4f, #b4d32a);
+    opacity: 0.75;
+    border: none;
+    border-radius: 20px;
+    width: 100px;
+    cursor: pointer;
+    margin-right: -20px;
+    
+}
+
+.search:hover{
+    box-shadow: rgba(149, 157, 168, 0) 0px 8px 24px;
+}
+
+.search-btn:hover{
+    background: linear-gradient(to bottom right, #3eaadb, #A1FFCE);
+
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cart , .user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--whiteColoe);
+    font-size: 20px;
+    color: var(--primaryColor);
+    text-decoration: none;
+    padding: 0 10px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.user:hover , .cart:hover{
+    box-shadow: rgba(37, 108, 208, 0) 0px 8px 24px;
+    
+}
+
+
+
+/* customaize page */
+
+.intro img{
+    height: 300px;
+    width: 500px;
+    margin-top: 50px;
+    float: left;
+    border-radius: 5px;
+    margin-right: 20px
+}
+
+
+
+
+.name{
+    margin-bottom: 10px;
+    margin-top: 35px;
+}
+
+.price{
+    margin-bottom: 10px;
+}
+
+.ingredents{
+    margin-bottom: 10px;
+}
+
+#name {
+    font-weight: bold;
+    color: black;
+}
+
+#price{
+    font-weight: bold;
+    color: black;
+}
+
+#ingredients{
+    font-weight: bold;
+    color: black;
+}
+
+#description{
+    font-weight: bold;
+    color: black;
+}
+
+.description span {
+    color: linear-gradient(to bottom right, #3eaadb, #A1FFCE);
+    color: rgb(167, 169, 53);
+}
+
+
+.toppings h3{
+    margin-bottom: 20px;
+}
+
+
+.radio-group label {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+/* demo */
+
+
+/* .demo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    margin-left: 70px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.demo input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: flex;
+    appearance: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    box-shadow: 0px 0px 5px #aac5c6;
+    border: 0.2vw solid rgba(2, 228, 231, 0.8);
+    background-color: #344056;
+    transition: 0.2s all linear;
+    margin-right: 30px;
+    position: relative;
+    top: 4px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+input:checked {
+    border: 0.7vw solid #344056;
+    background-color: rgba(2, 228, 231, 0.8);
+} */
+
+
+
+#decrementBtn , #incrementBtn{
+    height: 30px;
+    width: 30px;
+    border: none;
+    
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+#decrementBtn {
+    margin-right: 5px;
+}
+
+#incrementBtn {
+    margin-left: 5px;
+}
+
+
+.quantity-section{
+    margin-left: 90px;
+    margin-top: -25px;
+
+}
+
+
+
+#select {
+    border-radius: 5px;
+    border: none;
+    height: 25px;
+    margin-left: 10px;
+    text-align: justify;
+}
+
+
+/* .btn{
+    margin-top: 30px;
+    width: 100%;
+    padding: 5px;
+    font-size: 20px;
+    border: none;
+    display: block;
+    display: contents;
+    display: inline-block;
+    max-width: 100%;
+    background: linear-gradient(to bottom right, #3acb24, #adba21);
+} */
+
+
+
+.btn{
+    width: 100%;
+    border: none;
+    display: inline-block;
+    /* background-color: #3498DB; */
+    background: linear-gradient(to bottom right , rgb(88, 200, 189) , rgb(67, 137, 202));
+    color: rgb(142, 32, 32);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 15px;
+    opacity: 0.75;
+}
+
+
+.btn:hover{
+    background: linear-gradient(45deg , rgb(52, 127, 193) , rgb(140, 80, 205));
+    opacity: 0.75;
+}
+
+
+#toppings{
+    cursor: pointer;
+}
+
+
+.total{
+    text-align: right;
+}
+
+.total h2{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#totalAmount{
+    font-size: 15px;
+}

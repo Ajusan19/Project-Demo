@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customaize FreezerFrolic</title>
+    <link rel="shortcut icon" href="Add a subheading.png" type="image/x-icon" class="tab" style="border-radius: 50%;">
+    <link rel="stylesheet" href="GlacialGrove.css">
+</head>
+<body>
+    <!-- same -->
+    <!-- Side-Bar -->
+
+<div class="sidebar">
+    <!-- Logo -->
+<h1 class="logo"><img src="logo1-removebg-preview.png" alt=""></h1>
+
+<!-- List OF foods -->
+<div class="sidebar-menu">
+    <a href="#"><ion-icon name="storefront-outline"></ion-icon>Home</a>
+    <a href="#"><ion-icon name="receipt-outline"></ion-icon>Bills</a>
+    <a href="#"><ion-icon name="wallet-outline"></ion-icon>Cart</a>
+    <a href="#"><ion-icon name="notifications-outline"></ion-icon>Messages</a>
+    <a href="#"><ion-icon name="chatbubbles-outline"></ion-icon>Chat With Us</a>
+    <a href="#"><ion-icon name="settings-outline"></ion-icon>Settings</a>
+</div>
+<!-- Logout -->
+   <div class="sidebar-logout">
+    <a href="#"><ion-icon name="log-out-outline"></ion-icon>Logout</a>
+   </div>
+   
+</div>
+
+<!-- Main -->
+<div class="main">
+    <!-- main navbar -->
+    <div class="main-navbar">
+        <!-- mobile version -->
+        <ion-icon class="menu-toggle" name="menu-outline"></ion-icon>
+        <!-- search bar -->
+        <div class="search">
+            <input type="text" placeholder="What are You Searching For?">
+            <button class="search-btn">Search</button>
+        </div>
+        <!-- profile icon -->
+        <div class="profile">
+            <a class="cart" href="#"><ion-icon name="cart-outline"></ion-icon></a>
+            <a class="user" href="#"><ion-icon name="person-outline"></ion-icon></a>
+        </div>
+    </div>
+
+
+
+    <!-- customaize page -->
+    <div class="intro">
+        <img src="https://media.timeout.com/images/103894761/image.jpg" class="menu-img">
+    </div>
+<br><br><br>
+    <div class="description">
+        <span>
+        <div class="name">    <span id="name">Name -</span>  FreezerFrolic <br></div>
+            <div class="price"><span id="price">Price -</span>  Rs.1600 <br></div>
+            <div class="ingredents">            <span id="ingredients">Ingredients -</span> Vanilla ice-cream base , Strawberry puree , Chunks of cheesecake , Crunchy biscuit , Lemon zest <br>
+            </div>
+           <div class="descri"> <span id="description">Description -</span>  FreezerFrolic offers a frosty escape with its creamy delights. Each scoop delivers a symphony of flavors, from classic favorites to innovative creations, ensuring a sweet adventure in every bite.</div>
+        </span>
+    </div>
+<br>
+<br><br><br><br><br>
+
+    <!-- <div class="quantity">
+        <div><span>Quantity</span>
+            <div class="quantity-section">
+                <button id="decrementBtn">-</button>
+                <span id="quantityDisplay">1</span>
+                <button id="incrementBtn">+</button>
+              </div>
+        </div>
+    </div><br> -->
+
+    <div class="quantity-selection">
+        <h2 style="margin-bottom: 15px;">Quantity</h2>
+        <button id="decrementBtn" onclick="decrementQuantity()">-</button>
+        <input type="number" id="quantity" min="1" value="1" onchange="updateTotal()" style="width: 30px; border: none; background-color: #d9f2ee; margin-left: 5px; margin-right: -18px;">
+        <button id="incrementBtn" onclick="incrementQuantity()">+</button>
+      </div>
+
+
+
+
+
+<div class="ice-cream">
+  <h2 style="margin-bottom: 15px; margin-top: 15px;">Customize Your Ice Cream</h2>
+  <div class="layer" style="margin-bottom: 20px;">
+    <label for="layer1" style="margin-bottom: 10px;">Layer 1 : </label>
+    <select id="layer1" style="border: none; padding: 3px; border-radius: 3px;"></select>
+  </div>
+  <div class="layer" style="margin-bottom: 20px;">
+    <label for="layer2">Layer 2:</label>
+    <select id="layer2" style="border: none; padding: 3px; border-radius: 3px;"></select>
+  </div>
+  <div class="layer" style="margin-bottom: 20px;">
+    <label for="layer3">Layer 3:</label>
+    <select id="layer3"style="border: none; padding: 3px; border-radius: 3px;"></select>
+  </div>
+  <div class="layer" style="margin-bottom: 20px;">
+    <label for="layer4">Layer 4:</label>
+    <select id="layer4" style="border: none; padding: 3px; border-radius: 3px;" ></select>
+  </div>
+</div>
+
+
+
+
+
+    <!-- <div class="layer-1">
+        <h3>Flavours</h3><br>
+        <div><span>Layer 01 -</span>
+        <select name="" id="select">
+            <option value="" ></option>
+            <option value="">Vanilla</option>
+            <option value="">Chocolate</option>
+            <option value="">Blueberry</option>
+            <option value="">Strawberry</option>
+            <option value="">Cookies and Cream</option>
+            <option value="">Mint Chocolate Chip</option>
+            <option value="">Rocky Road</option>
+            <option value="">Butter Pecan</option>
+            
+        </select>
+        </div>
+    </div><br>
+
+    <div class="layer-2">
+        <div><span>Layer 02 - </span>
+        <select name="" id="select">
+            <option value=""></option>
+            <option value="">Vanilla</option>
+            <option value="">Chocolate</option>
+            <option value="">Blueberry</option>
+            <option value="">Strawberry</option>
+            <option value="">Cookies and Cream</option>
+            <option value="">Mint Chocolate Chip</option>
+            <option value="">Rocky Road</option>
+            <option value="">Butter Pecan</option>
+            
+        </select>
+        </div>
+    </div><br>
+
+
+    <div class="layer-3">
+        <div><span>Layer 03  - </span>
+        <select name="" id="select">
+            <option value=""></option>
+            <option value="">Vanilla</option>
+            <option value="">Chocolate</option>
+            <option value="">Blueberry</option>
+            <option value="">Strawberry</option>
+            <option value="">Cookies and Cream</option>
+            <option value="">Mint Chocolate Chip</option>
+            <option value="">Rocky Road</option>
+            <option value="">Butter Pecan</option>
+            
+        </select>
+        </div>
+    </div><br>
+
+
+    <div class="layer-4">
+        <div><span>Layer 04 - </span>
+        <select name="" id="select">
+            <option value="" placeholder=""></option>
+            <option value="">Vanilla</option>
+            <option value="">Chocolate</option>
+            <option value="">Blueberry</option>
+            <option value="">Strawberry</option>
+            <option value="">Cookies and Cream</option>
+            <option value="">Mint Chocolate Chip</option>
+            <option value="">Rocky Road</option>
+            <option value="">Butter Pecan</option>
+            
+        </select>
+        </div>
+    </div><br> -->
+
+
+
+
+    <!-- <div class="toppings">
+<h3>Toppings</h3>
+        <div class="radio-group">
+            <input type="radio" name="" id="toppings" style="margin-bottom: 20px;"> <label> Sprinkles</label> 
+        <input type="radio" name="" id="toppings" style="margin-left: 100px;"> <label> Chocolate Chips</label>
+        <input type="radio" name="" id="toppings" style="margin-left: 100px;"> <label for=""> Crushed Nuts</label>
+        <input type="radio" name="" id="toppings" style="margin-left: 100px;"> <label for=""> Caramel Sauce</label> <br>
+        <input type="radio" name="" id="toppings" style="margin-bottom: 20px;"> <label for=""> Hot Fudge Sauce</label>
+        <input type="radio" name="" id="toppings" style="margin-left:35px;"> <label for=""> Whipped Cream</label>
+        <input type="radio" name="" id="toppings" style="margin-left: 101px;"> <label for=""> Fresh Fruits</label>
+        <input type="radio" name="" id="toppings" style="margin-left: 119px;"> <label for=""> Marshmallows</label> <br>
+        <input type="radio" name="" id="toppings"> <label for=""> Cookie Crumbs</label>
+        <input type="radio" name="" id="toppings" style="margin-left: 48px;"> <label for=" "> Candy Piece</label>
+        <input type="radio" name="" id="toppings" style="margin-left: 130px;"> <label for=""> Brownie Chunks</label>
+        <input type="radio" name="" id="toppings" style="margin-left: 83px;"> <label for=""> Syrup</label>
+        </div>
+    
+    </div>
+    -->
+
+<!-- <div class="demo">
+
+   <input type="radio" name="contact" value="radio1" checked> <br>
+   <input type="radio" name="contact" value="radio2"> <br>
+   <input type="radio" name="contact" value="radio3">
+
+</div> -->
+
+
+
+
+<div class="container">
+    <div class="toppings">
+      <h2 style="margin-bottom: 15px;">Toppings</h2>
+      <label><input type="checkbox" name="topping" value="Chocolate" onclick="updateTotal(this)" style="margin-bottom: 20px; ;"> Chocolate Chips</label>
+      <label><input type="checkbox" name="topping" value="Strawberry" onclick="updateTotal(this)" style="margin-left: 80px;"> Cookie Crumbs</label>
+      <label><input type="checkbox" name="topping" value="Caramel" onclick="updateTotal(this)" style="margin-left: 80px;"> Caramel</label>
+      <label><input type="checkbox" name="topping" value="Caramel" onclick="updateTotal(this)" style="margin-left: 80px;"> Sprinkles</label><br>
+      <label><input type="checkbox" name="topping" value="Caramel" onclick="updateTotal(this)" style="margin-bottom: 20px;"> Hot Fudge Sauce</label>
+      <label><input type="checkbox" name="topping" value="Caramel" onclick="updateTotal(this)" style="margin-left: 77px;"> Whipped Cream</label>
+      <label><input type="checkbox" name="topping" value="Caramel" onclick="updateTotal(this)" style="margin-left: 72px;"> Candy Piece</label>
+      <label><input type="checkbox" name="topping" value="Caramel" onclick="updateTotal(this)" style="margin-left: 50px;"> Crushed Nutes</label><br>
+      <label><input type="checkbox" name="topping" value="Caramel" onclick="updateTotal(this)" style="margin-bottom: 40px;"> Fresh Fruits</label>
+      <label><input type="checkbox" name="topping" value="Caramel" onclick="updateTotal(this)" style="margin-left: 123px;"> Brownie Chunks</label>
+      <label><input type="checkbox" name="topping" value="Caramel" onclick="updateTotal(this)" style="margin-left: 77px;"> Marshmallows</label>
+      <label><input type="checkbox" name="topping" value="Caramel" onclick="updateTotal(this)" style="margin-left: 35px;"> Syrup</label>
+      <!-- Add more toppings as needed -->
+    </div>
+    <div class="total">
+      <h2>Total Amount</h2>
+      <p id="totalAmount"> 1600.00 <span>Rs</span></p>
+    </div>
+  </div>
+
+
+  <button class="btn"><a href="payment.html" style="text-decoration: none; color: black;">Pay Now</a></button>
+
+
+</body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="./1600.js"></script>
+</html>
